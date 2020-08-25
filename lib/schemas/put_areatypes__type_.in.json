@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        },
+        "requestBody": {
+            "required": [
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "name": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Area type name."
+                },
+                "color": {
+                    "type": "string",
+                    "description": "Area type color."
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "Area type icon."
+                },
+                "properties": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Generic properties."
+                }
+            },
+            "additionalProperties": false,
+            "description": "Area type."
+        }
+    }
+}

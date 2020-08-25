@@ -1,0 +1,40 @@
+{
+    "type": "object",
+    "properties": {
+        "type": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        },
+        "requestBody": {
+            "required": [
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "name": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Asset type name."
+                },
+                "color": {
+                    "type": "string",
+                    "description": "Asset type color."
+                },
+                "icon": {
+                    "type": "string",
+                    "description": "Asset type icon."
+                },
+                "properties": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Generic properties."
+                }
+            },
+            "additionalProperties": false,
+            "description": "Asset type."
+        }
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "type": "object",
+    "properties": {
+        "areaId": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        },
+        "query": {
+            "type": "string",
+            "default": ""
+        },
+        "fromDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "nullable": true
+        },
+        "toDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "nullable": true
+        },
+        "latestData": {
+            "type": "boolean",
+            "nullable": true
+        }
+    }
+}

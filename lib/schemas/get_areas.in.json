@@ -1,0 +1,51 @@
+{
+    "type": "object",
+    "properties": {
+        "query": {
+            "type": "string",
+            "default": ""
+        },
+        "types": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "coordinateSystems": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "fromDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "nullable": true
+        },
+        "toDateTime": {
+            "type": "string",
+            "format": "date-time",
+            "default": "",
+            "nullable": true
+        },
+        "latestData": {
+            "type": "boolean",
+            "nullable": true
+        },
+        "names": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "page": {
+            "type": "integer",
+            "format": "int32"
+        },
+        "numberOfItems": {
+            "type": "integer",
+            "format": "int32"
+        }
+    }
+}

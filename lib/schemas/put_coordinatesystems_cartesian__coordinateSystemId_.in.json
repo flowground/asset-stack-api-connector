@@ -1,0 +1,112 @@
+{
+    "type": "object",
+    "properties": {
+        "coordinateSystemId": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        },
+        "requestBody": {
+            "required": [
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Id"
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Name"
+                },
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string",
+                            "description": "Image URL"
+                        },
+                        "origin": {
+                            "type": "object",
+                            "properties": {
+                                "x": {
+                                    "type": "number",
+                                    "description": "X",
+                                    "format": "double"
+                                },
+                                "y": {
+                                    "type": "number",
+                                    "description": "Y",
+                                    "format": "double"
+                                },
+                                "z": {
+                                    "type": "number",
+                                    "description": "Z",
+                                    "format": "double"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "description": "Origin data"
+                        },
+                        "orientation": {
+                            "type": "object",
+                            "properties": {
+                                "yaw": {
+                                    "type": "number",
+                                    "description": "Yaw",
+                                    "format": "double"
+                                },
+                                "pitch": {
+                                    "type": "number",
+                                    "description": "Pitch",
+                                    "format": "double"
+                                },
+                                "roll": {
+                                    "type": "number",
+                                    "description": "Roll",
+                                    "format": "double"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "description": "Orientation data"
+                        },
+                        "dimensions": {
+                            "type": "object",
+                            "properties": {
+                                "x": {
+                                    "type": "number",
+                                    "description": "X",
+                                    "format": "double"
+                                },
+                                "y": {
+                                    "type": "number",
+                                    "description": "Y",
+                                    "format": "double"
+                                },
+                                "z": {
+                                    "type": "number",
+                                    "description": "Z",
+                                    "format": "double"
+                                }
+                            },
+                            "additionalProperties": false,
+                            "description": "Image dimensions"
+                        }
+                    },
+                    "additionalProperties": false,
+                    "description": "Image data"
+                },
+                "properties": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Generic properties."
+                }
+            },
+            "additionalProperties": false,
+            "description": "Local coordinate system"
+        }
+    }
+}

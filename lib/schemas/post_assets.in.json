@@ -1,0 +1,107 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "required": [
+                "name",
+                "type"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Id."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "Asset name."
+                },
+                "color": {
+                    "type": "string",
+                    "description": "Asset color."
+                },
+                "properties": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Generic properties."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Asset type."
+                },
+                "providers": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Id."
+                            },
+                            "properties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "property": {
+                                            "type": "string",
+                                            "description": "Property name."
+                                        },
+                                        "default": {
+                                            "type": "string",
+                                            "description": "Default value."
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "description": "Property."
+                                },
+                                "description": "Properties."
+                            }
+                        },
+                        "additionalProperties": false,
+                        "description": "Property configuration."
+                    },
+                    "description": "Provider configuration."
+                },
+                "subscriptions": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "string",
+                                "description": "Id."
+                            },
+                            "properties": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "property": {
+                                            "type": "string",
+                                            "description": "Property name."
+                                        },
+                                        "default": {
+                                            "type": "string",
+                                            "description": "Default value."
+                                        }
+                                    },
+                                    "additionalProperties": false,
+                                    "description": "Property."
+                                },
+                                "description": "Properties."
+                            }
+                        },
+                        "additionalProperties": false,
+                        "description": "Property configuration."
+                    },
+                    "description": "Subscription configuration."
+                }
+            },
+            "additionalProperties": false,
+            "description": "Asset."
+        }
+    }
+}

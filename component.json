@@ -1,0 +1,529 @@
+{
+    "title": "Asset Stack API",
+    "docsUrl": "",
+    "url": "/localization/api/v1",
+    "envVars": {},
+    "credentials": {
+        "fields": {
+            "server": {
+                "label": "Server",
+                "viewClass": "SelectView",
+                "model": [
+                    "/localization/api/v1",
+                    "--- Custom URL"
+                ],
+                "required": true
+            },
+            "otherServer": {
+                "label": "Custom Server URL",
+                "viewClass": "TextFieldView"
+            }
+        }
+    },
+    "triggers": {
+        "startFlow": {
+            "main": "./lib/triggers/startFlow.js",
+            "type": "polling",
+            "title": "Start Flow",
+            "fields": {}
+        }
+    },
+    "actions": {
+        "get_areatypes": {
+            "main": "./lib/actions/get_areatypes.js",
+            "title": "Get all area types",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_areatypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_areatypes": {
+            "main": "./lib/actions/post_areatypes.js",
+            "title": "Create area type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_areatypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_areatypes__type_": {
+            "main": "./lib/actions/get_areatypes__type_.js",
+            "title": "Get area type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_areatypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_areatypes__type_": {
+            "main": "./lib/actions/put_areatypes__type_.js",
+            "title": "Update area type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_areatypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_areatypes__type_": {
+            "main": "./lib/actions/delete_areatypes__type_.js",
+            "title": "Delete area type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_areatypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_areatypes__type_": {
+            "main": "./lib/actions/patch_areatypes__type_.js",
+            "title": "Patch area type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_areatypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_areas": {
+            "main": "./lib/actions/get_areas.js",
+            "title": "Get all areas",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_areas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_areas": {
+            "main": "./lib/actions/post_areas.js",
+            "title": "Create area",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_areas.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_areas__areaId_": {
+            "main": "./lib/actions/get_areas__areaId_.js",
+            "title": "Get area by id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_areas__areaId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_areas__areaId_": {
+            "main": "./lib/actions/put_areas__areaId_.js",
+            "title": "Update area",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_areas__areaId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_areas__areaId_": {
+            "main": "./lib/actions/patch_areas__areaId_.js",
+            "title": "Patch area",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_areas__areaId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_areas__areaId_": {
+            "main": "./lib/actions/delete_areas__areaId_.js",
+            "title": "Delete area",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_areas__areaId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_assettypes": {
+            "main": "./lib/actions/get_assettypes.js",
+            "title": "Get all asset types",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_assettypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_assettypes": {
+            "main": "./lib/actions/post_assettypes.js",
+            "title": "Create asset type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_assettypes.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_assettypes__type_": {
+            "main": "./lib/actions/get_assettypes__type_.js",
+            "title": "Get asset type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_assettypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_assettypes__type_": {
+            "main": "./lib/actions/put_assettypes__type_.js",
+            "title": "Update asset type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_assettypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_assettypes__type_": {
+            "main": "./lib/actions/delete_assettypes__type_.js",
+            "title": "Delete asset type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_assettypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_assettypes__type_": {
+            "main": "./lib/actions/patch_assettypes__type_.js",
+            "title": "Patch asset type",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_assettypes__type_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_assets": {
+            "main": "./lib/actions/get_assets.js",
+            "title": "Get assets",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_assets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_assets": {
+            "main": "./lib/actions/post_assets.js",
+            "title": "Create asset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_assets.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_assets__assetId_": {
+            "main": "./lib/actions/get_assets__assetId_.js",
+            "title": "Get asset by id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_assets__assetId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_assets__assetId_": {
+            "main": "./lib/actions/put_assets__assetId_.js",
+            "title": "Update asset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_assets__assetId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_assets__assetId_": {
+            "main": "./lib/actions/patch_assets__assetId_.js",
+            "title": "Patch asset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_assets__assetId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_assets__assetId_": {
+            "main": "./lib/actions/delete_assets__assetId_.js",
+            "title": "Delete asset",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_assets__assetId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_coordinatesystems_cartesian": {
+            "main": "./lib/actions/get_coordinatesystems_cartesian.js",
+            "title": "Get local coordinate systems",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_coordinatesystems_cartesian.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "post_coordinatesystems_cartesian": {
+            "main": "./lib/actions/post_coordinatesystems_cartesian.js",
+            "title": "Save coordinate system",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/post_coordinatesystems_cartesian.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_coordinatesystems_cartesian__coordinateSystemId_": {
+            "main": "./lib/actions/get_coordinatesystems_cartesian__coordinateSystemId_.js",
+            "title": "Get coordinate system by id",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_coordinatesystems_cartesian__coordinateSystemId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "put_coordinatesystems_cartesian__coordinateSystemId_": {
+            "main": "./lib/actions/put_coordinatesystems_cartesian__coordinateSystemId_.js",
+            "title": "Update coordinate system",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/put_coordinatesystems_cartesian__coordinateSystemId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "delete_coordinatesystems_cartesian__coordinateSystemId_": {
+            "main": "./lib/actions/delete_coordinatesystems_cartesian__coordinateSystemId_.js",
+            "title": "Delete coordinate system",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/delete_coordinatesystems_cartesian__coordinateSystemId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "patch_coordinatesystems_cartesian__coordinateSystemId_": {
+            "main": "./lib/actions/patch_coordinatesystems_cartesian__coordinateSystemId_.js",
+            "title": "Patch coordinate system",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/patch_coordinatesystems_cartesian__coordinateSystemId_.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        },
+        "get_coordinatesystems": {
+            "main": "./lib/actions/get_coordinatesystems.js",
+            "title": "Get coordinate systems",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/get_coordinatesystems.in.json",
+                "out": {
+                    "type": "object"
+                }
+            }
+        }
+    }
+}

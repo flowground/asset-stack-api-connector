@@ -1,0 +1,72 @@
+{
+    "type": "object",
+    "properties": {
+        "requestBody": {
+            "required": [
+                "coordinateSystemId",
+                "name",
+                "points",
+                "type"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string",
+                    "description": "Id."
+                },
+                "name": {
+                    "minLength": 1,
+                    "type": "string",
+                    "description": "Area name."
+                },
+                "type": {
+                    "type": "string",
+                    "description": "Area type."
+                },
+                "coordinateSystemId": {
+                    "type": "string",
+                    "description": "Coordinate system to which this area bellongs."
+                },
+                "points": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "x": {
+                                "type": "number",
+                                "description": "X.",
+                                "format": "double"
+                            },
+                            "y": {
+                                "type": "number",
+                                "description": "Y.",
+                                "format": "double"
+                            },
+                            "z": {
+                                "type": "number",
+                                "description": "Z.",
+                                "format": "double"
+                            }
+                        },
+                        "additionalProperties": false,
+                        "description": "Area point."
+                    },
+                    "description": "Area points."
+                },
+                "color": {
+                    "type": "string",
+                    "description": "Area color."
+                },
+                "properties": {
+                    "type": "object",
+                    "additionalProperties": {
+                        "type": "string"
+                    },
+                    "description": "Generic properties."
+                }
+            },
+            "additionalProperties": false,
+            "description": "Area."
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "coordinateSystemId": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        }
+    }
+}

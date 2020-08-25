@@ -1,0 +1,10 @@
+{
+    "type": "object",
+    "properties": {
+        "areaId": {
+            "required": true,
+            "type": "string",
+            "default": ""
+        }
+    }
+}
